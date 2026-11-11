@@ -20,11 +20,12 @@ public class BerechnungsController {
 
     @PostMapping("/rechner")
     public String berechnen(@Valid @ModelAttribute("berechnungsForm") BerechnungsForm berechnungsForm,
-                            BindingResult bindingResult) {
+                            BindingResult bindingResult, Model  model) {
         if (bindingResult.hasErrors()) {
             return "rechner";
         }
-        System.out.println("Rechnung mit Gewicht: " + berechnungsForm.getGewicht());
+        //System.out.println("Rechnung mit Gewicht: " + berechnungsForm.getGewicht());
+        model.addAttribute("ergebnis", berechnungsForm.getGewicht());
         return "rechner";
     }
 }
