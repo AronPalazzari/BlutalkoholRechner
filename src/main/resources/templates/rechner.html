@@ -50,6 +50,9 @@
         <div>
             <button type="submit">Berechnen</button>
         </div>
+        <div th:if="${ergebnis != null}">
+            <p>Gewicht: <span th:text="${ergebnis}"></span> kg</p>
+        </div>
 
 
     </form>
