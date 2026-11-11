@@ -8,5 +8,48 @@
 <body>
     <h1>Blutalkohol-Rechner</h1>
 
+    <form th:action="@{/rechner}" th:object="${berechnungsForm}" method="post">
+        <div>
+            <label for="geschlecht" class="form-label">Geschlecht</label>
+            <select id="geschlecht" th:field="*{geschlecht}" class="form-control">
+                <option value="">Bitte wählen</option>
+                <option value="m">Männlich</option>
+                <option value="w">Weiblich</option>
+            </select>
+        </div>
+        <div>
+            <label for="gewicht" class="form-label">Gewicht in kg</label>
+            <input type="number" id="gewicht" th:field="*{gewicht}" class="form-control"
+                   min = "6.5" max="635" step = "0.1" required>
+        </div>
+        <div>
+            <label for="bierMenge" class="form-label">Getrunkene Menge Bier in ml</label>
+            <input type="number" id="bierMenge" th:field="*{bierMenge}" class="form-control"
+                   min="0" max="55380" step="1">
+        </div>
+        <div>
+            <label for="weinMenge" class="form-label">Getrunkene Menge Wein in ml</label>
+            <input type="number" id="weinMenge" th:field="*{weinMenge}" class="form-control"
+                   min="0" max="18900" step="1">
+        </div>
+        <div>
+            <label for="kornMenge" class="form-label">Getrunkene Menge Korn in ml</label>
+            <input type="number" id="kornMenge" th:field="*{kornMenge}" class="form-control"
+                   min="0" max="1000" step="1">
+        </div>
+        <div>
+            <label for="vodkaMenge" class="form-label">Getrunkene Menge Vodka in ml</label>
+            <input type="number" id="vodkaMenge" th:field="*{vodkaMenge}" class="form-control"
+                   min="0" max="1000" step="1">
+        </div>
+        <div>
+            <label for="whiskeyMenge" class="form-label">Getrunkene Menge Whiskey in ml</label>
+            <input type="number" id="whiskeyMenge" th:field="*{whiskeyMenge}" class="form-control"
+                   min="0" max="1000" step="1">
+        </div>
+
+
+    </form>
+
 </body>
 </html>
