@@ -51,7 +51,7 @@
             <button type="submit">Berechnen</button>
         </div>
         <div th:if="${ergebnis != null}">
-            <p>Gewicht: <span th:text="${ergebnis}"></span> kg</p>
+            <p>Blutalkoholwert: <strong th:text="${#numbers.formatDecimal(ergebnis, 1, 2)}"></strong>%</p>
         </div>
 
 
