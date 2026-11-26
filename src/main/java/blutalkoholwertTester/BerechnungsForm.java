@@ -34,27 +34,27 @@ public class BerechnungsForm {
         return geschlecht;
     }
 
-    public double getGewicht() {
+    public Double getGewicht() {
         return gewicht;
     }
 
-    public int getBierMenge() {
+    public Integer getBierMenge() {
         return bierMenge;
     }
 
-    public int getWeinMenge() {
+    public Integer getWeinMenge() {
         return weinMenge;
     }
 
-    public int getKornMenge() {
+    public Integer getKornMenge() {
         return kornMenge;
     }
 
-    public int getVodkaMenge() {
+    public Integer getVodkaMenge() {
         return vodkaMenge;
     }
 
-    public int getWhiskeyMenge() {
+    public Integer getWhiskeyMenge() {
         return whiskeyMenge;
     }
 
@@ -62,27 +62,27 @@ public class BerechnungsForm {
         this.geschlecht = geschlecht;
     }
 
-    public void setGewicht(double gewicht) {
+    public void setGewicht(Double gewicht) {
         this.gewicht = gewicht;
     }
 
-    public void setBierMenge(int bierMenge) {
+    public void setBierMenge(Integer bierMenge) {
         this.bierMenge = bierMenge;
     }
 
-    public void setWeinMenge(int weinMenge) {
+    public void setWeinMenge(Integer weinMenge) {
         this.weinMenge = weinMenge;
     }
 
-    public void setKornMenge(int kornMenge) {
+    public void setKornMenge(Integer kornMenge) {
         this.kornMenge = kornMenge;
     }
 
-    public void setVodkaMenge(int vodkaMenge) {
+    public void setVodkaMenge(Integer vodkaMenge) {
         this.vodkaMenge = vodkaMenge;
     }
 
-    public void setWhiskeyMenge(int whiskeyMenge) {
+    public void setWhiskeyMenge(Integer whiskeyMenge) {
         this.whiskeyMenge = whiskeyMenge;
     }
 }
