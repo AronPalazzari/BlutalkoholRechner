@@ -39,23 +39,23 @@ public class BerechnungsForm {
     }
 
     public Integer getBierMenge() {
-        return bierMenge;
+        return bierMenge == null ? 0 : bierMenge;
     }
 
     public Integer getWeinMenge() {
-        return weinMenge;
+        return weinMenge == null ? 0 : weinMenge;
     }
 
     public Integer getKornMenge() {
-        return kornMenge;
+        return kornMenge ==  null ? 0 : kornMenge;
     }
 
     public Integer getVodkaMenge() {
-        return vodkaMenge;
+        return vodkaMenge == null ? 0 : vodkaMenge;
     }
 
     public Integer getWhiskeyMenge() {
-        return whiskeyMenge;
+        return whiskeyMenge == null ? 0 : whiskeyMenge;
     }
 
     public void setGeschlecht(String geschlecht) {
