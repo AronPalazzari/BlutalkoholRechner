@@ -16,19 +16,19 @@ public class BerechnungsForm {
 
     //Mengen werden in ml gemessen
     @Min(value = 0, message = "Die Menge kann nicht negativ sein")
-    private int bierMenge;
+    private Integer bierMenge;
 
     @Min(value = 0, message = "Die Menge kann nicht negativ sein")
-    private int weinMenge;
+    private Integer weinMenge;
 
     @Min(value = 0, message = "Die Menge kann nicht negativ sein")
-    private int kornMenge;
+    private Integer kornMenge;
 
     @Min(value = 0, message = "Die Menge kann nicht negativ sein")
-    private int vodkaMenge;
+    private Integer vodkaMenge;
 
     @Min(value = 0, message = "Die Menge kann nicht negativ sein")
-    private int whiskeyMenge;
+    private Integer whiskeyMenge;
 
     public String getGeschlecht() {
         return geschlecht;
