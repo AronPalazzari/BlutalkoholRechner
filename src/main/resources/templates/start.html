@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blutalkohol-Rechner: Eingabe des Geschlechts und des Gewichts</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<main class="container my-5">
+    <div class="mx-auto" style="max-width: 400px;">
+    <h1>Blutalkohol-Rechner: Eingabe des Geschlechts und des Gewichts</h1>
+
+    <form th:action="@{/start}" th:object="${berechnungsForm}" method="post">
+        <div class="mb-3">
+            <label for="geschlecht" class="form-label">Geschlecht</label>
+            <select id="geschlecht" th:field="*{geschlecht}" class="form-control">
+                <option value="">Bitte wählen</option>
+                <option value="m">Männlich</option>
+                <option value="w">Weiblich</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="gewicht" class="form-label">Gewicht in kg</label>
+            <input type="number" id="gewicht" th:field="*{gewicht}" class="form-control"
+                   min = "6.5" max="635" step = "0.1" required>
+            <div class="text-danger" th:if="${#fields.hasErrors('geschlecht')}" th:errors="*{geschlecht}"></div>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">weiter</button>
+        </div>
+    </form>
+    </div>
+</main>
+</body>
+</html>
