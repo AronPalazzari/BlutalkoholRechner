@@ -12,7 +12,7 @@ public class BerechnungsForm {
     @NotNull(message = "Bitte Gewicht eingeben")
     @DecimalMin(value = "6.5", message = "Bitte ein gültiges Gewicht angeben") //leichteste Person der Welt wiegt 6,5kg
     @DecimalMax(value = "635", message = "Bitte ein gültiges Gewicht angeben") //schwerste person der Welt wiegt 635kg
-    private double gewicht;
+    private Double gewicht;
 
     //Mengen werden in ml gemessen
     @Min(value = 0, message = "Die Menge kann nicht negativ sein")
