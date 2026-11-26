@@ -4,7 +4,8 @@ import jakarta.validation.constraints.*;
 
 public class BerechnungsForm {
 
-    @NotNull(message = "Bitte Geschlecht auswählen")
+    @NotBlank(message = "Bitte Geschlecht auswählen")
+    @Pattern(regexp = "[mw]", message = "Ungültiges Geschlecht")
     private String geschlecht;
 
     //Gewicht wird in kg gemessen
